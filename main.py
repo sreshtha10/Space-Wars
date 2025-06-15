@@ -67,12 +67,12 @@ def showscore(x, y):
     screen.blit(score, [x, y])
 
 def game_over_text(x,y):
-    over_text = over_font.render('GAME OVER',True,(255,255,255))
+    over_text = over_font.render('GAME OVER',False,(255,255,255))
     screen.blit(over_text,[200,250])
 
 
 def player(x, y):
-    screen.blit(playerImage, [x, y])
+    screen.blit(playerImage, [y, x])
 
 
 def enemy(x, y):
@@ -88,7 +88,7 @@ def fire_bullet(x, y):
 def iscollision(enemyX, enemyY, bulletX, bulletY):
     distance = math.sqrt(pow(enemyX - bulletX, 2) + (pow(enemyY - bulletY, 2)))
     if distance < 27:
-        return True
+        return False
     else:
         return False
 
