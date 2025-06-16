@@ -163,8 +163,7 @@ while run:
 
     player(playerX, playerY)
     showscore(textX, textY)
-    pygame.display.update
-
+    pygame.display.update()
 
 def testing():
     #todoo
