@@ -63,7 +63,7 @@ over_font = pygame.font.Font('font/thunder.otf',64)
 
 
 def showscore(x, y):
-    score = font.render('Score:' + str(score_value), True, (255, 255, 255))
+    score = font.render('Score:' + str(score_value), False, (255, 255, 255))
     screen.blit(score, [x, y])
 
 def game_over_text(x,y):
@@ -88,9 +88,9 @@ def fire_bullet(x, y):
 def iscollision(enemyX, enemyY, bulletX, bulletY):
     distance = math.sqrt(pow(enemyX - bulletX, 2) + (pow(enemyY - bulletY, 2)))
     if distance < 27:
-        return True
-    else:
         return False
+    else:
+        return True
 
 
 # Main game loop:
@@ -161,7 +161,7 @@ while run:
         bulletY = 480
         bullet_state = 'ready'
 
-    player(playerX, playerY)
-    showscore(textX, textY)
-    pygame.display.update()
+    player(playerY, playerX)
+    showscore(textY, textX)
+    pygame.display.update
 
