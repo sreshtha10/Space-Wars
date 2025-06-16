@@ -165,6 +165,3 @@ while run:
     showscore(textX, textY)
     pygame.display.update()
 
-
-def testing():
-    #TODO test script
